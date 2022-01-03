@@ -4,14 +4,14 @@
      header("location: ../");
     }
     $userdata = $_SESSION["userdata"];
-    $groupsdata = $_SESSION["groupsdata"];
+    //$groupsdata = $_SESSION["groupsdata"];
 
-    if($_SESSION["userdata"]['status']==0){
+    /*if($_SESSION["userdata"]['status']==0){
         $status = '<b style="color:red;">not voted</b>';
     }
     else{
         $status = '<b style="color:green;">voted</b>';
-    }
+    }*/
 ?>
 
 <html>
@@ -68,13 +68,13 @@
                 <b class="Pdata">Address : </b>
                 <?php echo $userdata['address']?><br><br>
                 <b class="Pdata">Status : </b>
-                <?php echo $status ?><br><br>
+                <?php// echo $status ?><br><br>
             </div>
             
             <div id="Group">
 
             <?php
-                if($_SESSION["groupsdata"]){
+                /*if($_SESSION["groupsdata"]){
                     for($i=0; $i<count($groupsdata); $i++)
                     {
                         ?>
@@ -110,7 +110,7 @@
                 }
                 else{
 
-                }
+                }*/
             ?>
             
             </div>
