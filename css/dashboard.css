@@ -1,0 +1,84 @@
+
+
+#headerSection {
+    padding: 5px;
+}
+
+.heading {
+    padding-top: 0rem;
+    margin-left: -80px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-bottom: 0;
+}
+
+.heading span {
+    color: var(--green);
+    text-transform: uppercase;
+    animation: blinking 3s infinite;
+}
+@keyframes blinking {
+0% {
+color: var(--bg-color);
+}
+
+100% {
+color: var(--green);
+}
+}
+#profile{
+    width: 400px;
+    height: 400px;
+    margin: 100 auto;
+    box-shadow: var(--box-shadow);
+    color: rgb(247, 248, 248);
+    margin-top: 50px;
+    margin-left: 80px;
+}
+.Pdata{
+    color: var(--black);
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#group{
+    width: 700px;
+    height: 400px;
+    margin: 100 auto;
+    box-shadow: var(--box-shadow);
+    color: rgb(247, 248, 248);
+    margin-top: 50px;
+    margin-left: 10px;
+}
+#Gdata{
+    width: 450px;
+    height: 50px;
+    margin: 100 auto;
+    color: black;
+    margin-top: -200px;
+    margin-left: 30px;
+}
+#Gimg{
+    width: 80px;
+    height: 80px;
+    margin: 100 auto;
+    background-color: rgb(83, 141, 141);
+    margin-top: 25px;
+    margin-left: 550px;
+}
+
+
+
+#valuebtn{
+    background-color: #0fa19a;
+    color: white;
+    border-radius: 5px;
+}
+#voted{
+    background-color: #31a10f;
+    color: white;
+    border-radius: 5px;
+    
+}
