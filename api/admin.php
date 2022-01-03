@@ -5,17 +5,14 @@
     $a_password = $_POST['a_password'];
     $a_email = $_POST['a_email'];
 
-    $check = mysqli_query($connect, "SELECT * FROM vote WHERE a_password='$a_password' AND a_email='$a_email'");
-    if(mysqli_num_rows($check) > 0){
-      $userdata = mysqli_fetch_array($check);
-      $groups = mysqli_query($connect, "SELECT * FROM vote WHERE role =2 ");
-      $groupsdata = mysqli_fetch_all($groups, MYSQLI_ASSOC);
-      $_SESSION['userdata'] = $userdata;
-      $_SESSION['groupsdata'] = $groupsdata;
+    $admin = mysqli_query($connect, "SELECT * FROM admin WHERE a_password='$a_password' AND a_email='$a_email'");
+    if(mysqli_num_rows($admin) > 0){
+      
 
       echo '
           <script>
-            window.location = "../routes/dashboard.php";
+          alert("Admin login Successful!!");
+            window.location = "../routes/a-dash.html";
           </script>
         ';
     }
