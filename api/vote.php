@@ -11,7 +11,7 @@
    if($update_votes and $update_user_status){
        $groups = mysqli_query($connect, "SELECT * FROM user WHERE role =2 ");
        $groupsdata = mysqli_fetch_all($groups, MYSQLI_ASSOC);
-       $_SESSION['userdata']['status'] = 1;
+       $_SESSION['userdata']['vstatus'] = 1;
        $_SESSION['groupsdata'] = $groupsdata;
 
        echo '

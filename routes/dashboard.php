@@ -4,14 +4,14 @@
      header("location: ../");
     }
     $userdata = $_SESSION["userdata"];
-    //$groupsdata = $_SESSION["groupsdata"];
+    $groupsdata = $_SESSION["groupsdata"];
 
-    /*if($_SESSION["userdata"]['vstatus']==0){
+    if($_SESSION["userdata"]['vstatus']==0){
         $vstatus = '<b style="color:red;">not voted</b>';
     }
     else{
         $vstatus = '<b style="color:green;">voted</b>';
-    }*/
+    }
 ?>
 
 <html>
@@ -90,14 +90,16 @@
                             </div>
                             <br>-->
                             <div id="Gdata">
-                            <b>Voting Topic : </b><?php echo $groupsdata[$i]['topic']?><br><br>
+                            
                             <b>Category A : </b><?php echo $groupsdata[$i]['category_A']?><br><br>
                             <b>Category B : </b><?php echo $groupsdata[$i]['category_B']?><br><br>
                             <form action="../api/vote.php" method="POST">
+                                <b>Voting Topic : </b><?php echo $groupsdata[$i]['topic']?><br><br>
+                                <input type="submit" name="" value="<?php //echo $groupsdata[$i]['votes'] ?>">
                                 <!--<input type="hidden" name="gvotes" value="<?php //echo $groupsdata[$i]['votes'] ?>">
                                 <input type="hidden" name="gid" value="<?php //echo $groupsdata[$i]['id'] ?>"> -->
                                 <?php
-                                   if($_SESSION['userdata']['status']==0){
+                                   if($_SESSION['userdata']['vstatus']==0){
                                        ?>
                                        <input type="submit" name="valuebtn" value="vote" id="valuebtn">
                                        <?php
