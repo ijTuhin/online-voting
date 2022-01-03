@@ -7,10 +7,10 @@
     //$groupsdata = $_SESSION["groupsdata"];
 
     /*if($_SESSION["userdata"]['vstatus']==0){
-        $status = '<b style="color:red;">not voted</b>';
+        $vstatus = '<b style="color:red;">not voted</b>';
     }
     else{
-        $status = '<b style="color:green;">voted</b>';
+        $vstatus = '<b style="color:green;">voted</b>';
     }*/
 ?>
 
@@ -68,33 +68,34 @@
                <b class="Pdata">Department : </b>
                <?php echo $userdata['dept']?><br>
                <b class="Pdata">Gender : </b>
-               <?php// echo $userdata['gender']?><br>
+               <?php echo $userdata['gender']?><br>
                 <b class="Pdata">Mobile: </b>+880
                 <?php echo $userdata['mobile']?><br>
                 <b class="Pdata">Address : </b>
                 <?php echo $userdata['address']?><br>
                 <b class="Pdata">Status : </b>
-                <?php// echo $status ?><br>
+                <?php echo $vstatus ?><br>
             </div>
             
             <div id="Group">
 
             <?php
-                /*if($_SESSION["groupsdata"]){
+                if($_SESSION["groupsdata"]){
                     for($i=0; $i<count($groupsdata); $i++)
                     {
                         ?>
                         <div>
-                            <div >
-                            <img src="../uploads/<?php echo $groupsdata[$i]['photo']?>" id="Gimg">
+                            <!--<div >
+                            <img src="../uploads/<?php //echo $groupsdata[$i]['photo']?>" id="Gimg">
                             </div>
-                            <br>
+                            <br>-->
                             <div id="Gdata">
-                            <b>Groups Name : </b><?php echo $groupsdata[$i]['name']?><br><br>
-                            <b>Votes : </b><?php echo $groupsdata[$i]['vote']?><br><br>
+                            <b>Voting Topic : </b><?php echo $groupsdata[$i]['topic']?><br><br>
+                            <b>Category A : </b><?php echo $groupsdata[$i]['category_A']?><br><br>
+                            <b>Category B : </b><?php echo $groupsdata[$i]['category_B']?><br><br>
                             <form action="../api/vote.php" method="POST">
-                                <input type="hidden" name="gvotes" value="<?php echo $groupsdata[$i]['votes'] ?>">
-                                <input type="hidden" name="gid" value="<?php echo $groupsdata[$i]['id'] ?>">
+                                <!--<input type="hidden" name="gvotes" value="<?php //echo $groupsdata[$i]['votes'] ?>">
+                                <input type="hidden" name="gid" value="<?php //echo $groupsdata[$i]['id'] ?>"> -->
                                 <?php
                                    if($_SESSION['userdata']['status']==0){
                                        ?>
@@ -116,7 +117,7 @@
                 }
                 else{
 
-                }*/
+                }
             ?>
             
             </div>

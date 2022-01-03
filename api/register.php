@@ -13,7 +13,7 @@
 
     if($password==$cpassword){
         move_uploaded_file($tmp_name, "../uploads/$image");
-        $insert = mysqli_query($connect, "INSERT INTO vote(name, s_id, email, mobile, address, password, dept, photo) VALUES('$name','$s_id','$email','$mobile','$address','$password','$dept','$image')");
+        $insert = mysqli_query($connect, "INSERT INTO vote(name, s_id, email, mobile, address, password, dept, photo, gender, otp, vstatus) VALUES('$name','$s_id','$email','$mobile','$address','$password','$dept','$image','Female','0','0')");
         
         if($insert){
             echo '
