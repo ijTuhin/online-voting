@@ -62,13 +62,19 @@
             <div id="Profile">
                 <img src="../uploads/<?php echo $userdata['photo']?>" height="100" width="100" class="Pdata"><br><br>
                 <b class="Pdata">Name : </b>
-               <?php echo $userdata['name']?><br><br>
+               <?php echo $userdata['name']?><br>
+               <b class="Pdata">Matric ID : </b>
+               <?php echo $userdata['s_id']?><br>
+               <b class="Pdata">Department : </b>
+               <?php echo $userdata['dept']?><br>
+               <b class="Pdata">Gender : </b>
+               <?php// echo $userdata['gender']?><br>
                 <b class="Pdata">Mobile: </b>+880
-                <?php echo $userdata['mobile']?><br><br>
+                <?php echo $userdata['mobile']?><br>
                 <b class="Pdata">Address : </b>
-                <?php echo $userdata['address']?><br><br>
+                <?php echo $userdata['address']?><br>
                 <b class="Pdata">Status : </b>
-                <?php// echo $status ?><br><br>
+                <?php// echo $status ?><br>
             </div>
             
             <div id="Group">
