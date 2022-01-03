@@ -6,7 +6,7 @@
     $userdata = $_SESSION["userdata"];
     //$groupsdata = $_SESSION["groupsdata"];
 
-    /*if($_SESSION["userdata"]['status']==0){
+    /*if($_SESSION["userdata"]['vstatus']==0){
         $status = '<b style="color:red;">not voted</b>';
     }
     else{
